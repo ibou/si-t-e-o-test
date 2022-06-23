@@ -1,0 +1,9 @@
+App\Entity\User:
+  ibou:  
+      email: 'ibou@gmail.com'
+      roles: ['ROLE_ADMIN']
+      password: '\$2y\$13\$FPBt2VXO5ZingpJ1b/9i/eJRo.T5AYP9mNYMSDYdU4fu9ONJc5.um'
+  user_{1..5}:
+      email: <email()>
+      roles: ['ROLE_USER']
+      password: '\$2y\$13\$MjFsd2GELva0Ou8Re0N2pOhr0.yhAFIw8cwY/YlZWpXEz40LIItf.'

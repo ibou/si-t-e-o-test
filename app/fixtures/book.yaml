@@ -1,0 +1,6 @@
+App\Entity\Book:
+  book_{1..20}:
+      title: <sentence(3, true)>
+      content: <text(50)>
+      price: <numberBetween(13, 22)>
+      author: <username()>

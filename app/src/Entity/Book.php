@@ -24,6 +24,12 @@ class Book
     #[ORM\Column(type: 'string', length: 255)]
     private string $content = "";
 
+    #[ORM\Column(type: 'float')]
+    private ?float $price = 0;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private ?string $author = '';
+
     public function getId(): ?int
     {
         return $this->id;
@@ -49,6 +55,30 @@ class Book
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getPrice(): ?float
+    {
+        return $this->price;
+    }
+
+    public function setPrice(float $price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?string
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(string $author): self
+    {
+        $this->author = $author;
 
         return $this;
     }

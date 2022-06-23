@@ -1,0 +1,4 @@
+App\Entity\Materiel:
+  mat_{1..12}:
+      name: <sentence(2, true)>
+      weight: <numberBetween(100, 250)> 

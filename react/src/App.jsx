@@ -9,7 +9,7 @@ function App() {
   const [name, setName] = useState('');
   const [weight, setWeight] = useState(0);
 
-
+console.log("api",Http.baseApi)
   const getMateriaux = async() => {
       const response = await Http.getAxiosClient().get(`${Http.baseApi}/materiels`);
       setMateriels(response.data['hydra:member']);
@@ -22,6 +22,7 @@ function App() {
     };
     await Http.getAxiosClient().post(`${Http.baseApi}/materiels`, newMateriel); 
     setMateriels([newMateriel,...materiels]); 
+    setTotal(total+1)
   }
   useEffect(() => {
     getMateriaux();
