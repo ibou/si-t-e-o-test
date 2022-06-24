@@ -1,9 +1,10 @@
 import axios from 'axios';
+import Auth from './Auth';
 
 const axiosInstance = axios.create();
 const configure = () => {
   axiosInstance.interceptors.request.use((config) => {
-    // config.headers.Authorization = 'Bearer ' + localStorage.getItem('token');
+    config.headers.Authorization = `Bearer ${Auth.getToken()}`;
     return Promise.resolve(config);
   });
 };
